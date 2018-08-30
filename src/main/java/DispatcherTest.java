@@ -13,5 +13,7 @@ public class DispatcherTest {
                 .dispatch("2", new Object[]{"1","2","3"}, result1);
         System.out.println("checkLength->"+result.t);
         System.out.println("plusWorker->"+result1.t);
+        System.out.println("checkLength->"+dispatcher.dispatch("1", new Object[]{1, "a"}, BoolWrapper.INSTANCE));
+        System.out.println("plusWorker->"+dispatcher.dispatch("2", new Object[]{"1","3","5"}, LongWrapper.INSTANCE));
     }
 }
